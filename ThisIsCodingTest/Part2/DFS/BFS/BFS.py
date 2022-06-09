@@ -2,6 +2,7 @@
 # dfs, bfs 모두 O(N)이지만, recursion의 dfs는 수행시간이 살짝 느림. --> 코테에서는 bfs가 조금 더 유리!
 
 from collections import deque
+from re import I
 
 
 def bfs(graph, start, visited):
@@ -31,4 +32,9 @@ graph = [
 
 visited = [False] * 9
 
-bfs(graph, 1, visited)
+# bfs(graph, 1, visited)
+
+val = 256-240
+for i in range(257):
+    if i % val == 0:
+        print('~', i-1)

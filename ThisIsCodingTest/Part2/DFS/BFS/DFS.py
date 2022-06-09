@@ -1,11 +1,11 @@
-# dfs 는 깊이우선탐색(가장 먼 곳의 노드부터 탐색)
+# dfs 는 깊이우선탐색(가장 먼 곳의 노드부터 탐색) -> 재귀적으로 구현하면 쉽다!!! ( 재귀적 함수는 깊은 곳 까지 가서 return, return 해 오기 때문에..)
 # recursion 을 이용한 방식은 간결하나, stack을 이용한 방식보다 시간복잡도가 더 안좋음.
 
 ##########################################
 # WAY 1. Implement dfs using recursion
 # Original (book)
 # Recursion의 원리를 이용.
-def dfs_recursion(graph, v, visited):
+def dfs(graph, v, visited):
     # 현재 노드를 방문 처리.
     visited[v] = True
     print(v, end=' ')
@@ -13,7 +13,7 @@ def dfs_recursion(graph, v, visited):
     # 현재 노드와 연결된 다른 노드를 재귀적으로 방문.
     for node in graph[v]:
         if not visited[node]:
-            dfs_recursion(graph, node, visited)
+            dfs(graph, node, visited)
 
 
 ##########################################
@@ -60,4 +60,4 @@ graph = [
 
 visited = [False] * 9  # (0번부터 9개의 vertex가 있다고 가정.)
 
-dfs_with_stack(graph, 1, visited)
+# dfs_with_stack(graph, 1, visited)
