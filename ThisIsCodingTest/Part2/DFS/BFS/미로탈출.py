@@ -2,10 +2,16 @@ from collections import deque
 from turtle import distance
 n, m = map(int, input().split())
 
-graph = []
+graph = [
+    [1, 0, 1, 0, 1, 0],
+    [1, 1, 1, 1, 1, 1],
+    [0, 0, 0, 0, 0, 1],
+    [1, 1, 1, 1, 1, 1],
+    [1, 1, 1, 1, 1, 1],
+]
 
-for i in range(n):
-    graph.append(list(map(int, input())))
+# for i in range(n):
+#     graph.append(list(map(int, input())))
 
 
 def bfs(x, y):
