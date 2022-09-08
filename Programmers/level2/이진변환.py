@@ -1,10 +1,22 @@
-def solution(A,B):
-    acc = 0
-    A = sorted(A)
-    B = sorted(B, reverse = True)
+def solution(s):
+    answer = []
+    cnt_a = 0
+    cnt_b = 0
 
-    for i in range(len(A)):
-        acc += A[i] * B[i]
-    return acc
+    while (True):
+        if (s == "1") : break
+        length = 0
+        for idx, el in enumerate(s):
+            if (el == '0'):
+                cnt_b += 1
+            else: length += 1
+            
+        
+        cnt_a += 1
+        s = bin(length)[2:]
 
-print(solution([1,4,2],[5,4,4]))
+    
+    return [cnt_a, cnt_b]
+
+# print(solution("110010101001"))
+print(solution("01110"))
