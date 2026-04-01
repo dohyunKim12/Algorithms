@@ -1,3 +1,5 @@
 /.vscode
 /.jasoseo.md
 /TmaxCT
+.idea/
+*.iml
